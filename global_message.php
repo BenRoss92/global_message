@@ -9,16 +9,16 @@
 
   function add_widget_form() {
     ?>
-    <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
-     <h3>Message:</h3>
-     <div class="textarea-wrap">
-        <textarea name="global-message-text"
-        placeholder="e.g. Half-price sale now on!"
-        rows="3" cols="15"><?php echo get_option('global_message'); ?></textarea>
-     </div>
-     <input type="hidden" name="action" value="global_message_form">
-     <?php submit_button('Update Message'); ?>
-    </form>
+      <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
+        <h3>Message:</h3>
+        <div class="textarea-wrap">
+          <textarea name="global-message-text"
+          placeholder="e.g. Half-price sale now on!"
+          rows="3" cols="15"><?php echo get_option('global_message'); ?></textarea>
+        </div>
+        <input type="hidden" name="action" value="global_message_form">
+        <?php submit_button('Update Message'); ?>
+      </form>
     <?php
   }
 
@@ -33,10 +33,17 @@
 
  function add_message_to_database() {
    $message_to_add = $_POST['global-message-text'];
-    update_option('global_message', $message_to_add);
+   update_option('global_message', $message_to_add);
 
-    wp_safe_redirect('http://localhost/~Ben/wordpress/wp-admin/');
-    exit;
+   wp_safe_redirect('http://localhost/~Ben/wordpress/wp-admin/');
+   exit;
+ }
+
+ add_filter('the_content', 'add_mesage_to_content');
+
+ function add_mesage_to_content($content) {
+   $message_to_add = get_option('global_message');
+   return $message_to_add . $content;
  }
 
 ?>
