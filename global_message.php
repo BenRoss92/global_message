@@ -33,10 +33,10 @@
 
  function add_message_to_database() {
    $message_to_add = $_POST['global-message-text'];
-   add_option('global_message', $message_to_add);
+    update_option('global_message', $message_to_add);
 
-   wp_safe_redirect('http://localhost/~Ben/wordpress/wp-admin/');
-   exit;
+    wp_safe_redirect('http://localhost/~Ben/wordpress/wp-admin/');
+    exit;
  }
 
 ?>
