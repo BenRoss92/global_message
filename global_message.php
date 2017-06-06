@@ -8,7 +8,7 @@
   */
 
   function add_widget_editor() {
-    $default_content = get_option('global_message');
+    $default_content = stripslashes(get_option('global_message'));
     $editor_id = 'global-message-editor';
     $editor_settings = array(
       'media_buttons' => FALSE,
@@ -44,8 +44,9 @@
   add_filter('the_content', 'add_mesage_to_content');
 
   function add_mesage_to_content($content) {
-    $message_to_add = get_option('global_message');
+    $message_to_add = stripslashes(get_option('global_message'));
     return $message_to_add . $content;
   }
+
 
 ?>
