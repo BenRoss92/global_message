@@ -30,6 +30,7 @@ As I had not used the WordPress Plugin API before, I decided to start by spiking
   - E.g. move the form generation function into a `View` class - separating the generation of the view from the business logic.
 - Remove hardcoded variables in `display_editor()`, `update_message()` and `add_mesage_to_content($content)` functions
   - To do this, when adding WordPress actions, could pass arguments into custom functions by using e.g. `do_action` or wrap them in separate functions.
+  - Adding smaller commits to the `testing` branch as I had done in the `spiking` branch
 
 ## Challenges faced
 
@@ -61,6 +62,6 @@ and a test database named `wordpress_test`
 ### Using the plugin
 
 1. Activate the 'Global Message' plugin in the WordPress admin dashboard (`http://localhost/~<YOURUSERNAME>/wordpress/wp-admin`)
-2. Run the unit tests - `$ phpunit`
+2. `cd` into the `wordpress/wp-content/plugins/global_message` directory and run the unit tests - `$ phpunit --debug`
 3. Add a global message in the Global Message widget inside the WordPress admin dashboard and click 'Update Message'
 4. View the global message on all pages (e.g. to view the landing page, visit `http://localhost/~<YOURUSERNAME>/wordpress/`)
