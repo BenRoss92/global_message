@@ -53,14 +53,15 @@ As I had not used the WordPress Plugin API before, I decided to start by spiking
 ### Installation and configuration
 
 1. Install Apache, MySQL and PHP ([MAMP](https://www.mamp.info/en/downloads/) is one option for installing these on a unix or linux machine. WordPress also has [instructions](https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP) for installing MAMP and WordPress)
-2. Download the latest version of [WordPress](https://wordpress.org/download/) and unzip the folder
-3. Name the WordPress download folder as `wordpress` and move it into your `/Users/<YOURUSERNAME>/Sites/` directory (or create this directory if needed). The working directory should be `/Users/<YOURUSERNAME>/Sites/wordpress`
-4. Log into MySQL and Create a development database named `wordpress`
+2. Install [PHPUnit](https://github.com/sebastianbergmann/phpunit#installation)
+3. Install [WP-CLI](http://wp-cli.org/#installing)
+4. Download the latest version of [WordPress](https://wordpress.org/download/) and unzip the folder
+5. Name the WordPress download folder as `wordpress` and move it into your `/Users/<YOURUSERNAME>/Sites/` directory (or create this directory if needed). The working directory should be `/Users/<YOURUSERNAME>/Sites/wordpress`
+6. Log into MySQL and Create a development database named `wordpress`
 and a test database named `wordpress_test`
-5. Make sure MySQL is running in your system preferences.
-6. Clone this repo - `$ git clone git@github.com:BenRoss92/global_message.git` - and add the resulting `global_message` folder to the plugins directory in your local WordPress download folder - `/Users/<YOURUSERNAME>/Sites/wordpress/wp-content/plugins/`
-7. Visit `http://localhost/~<YOURUSERNAME>/wordpress/` in a browser to configure your local version of WordPress with your development database and other required information.
-8. Install [WP-CLI](http://wp-cli.org/#installing)
+7. Make sure MySQL is running in your system preferences.
+8. Clone this repo - `$ git clone git@github.com:BenRoss92/global_message.git` - and add the resulting `global_message` folder to the plugins directory in your local WordPress download folder - `/Users/<YOURUSERNAME>/Sites/wordpress/wp-content/plugins/`
+9. Visit `http://localhost/~<YOURUSERNAME>/wordpress/` in a browser to configure your local version of WordPress with your development database and other required information.
 
 ### Using the plugin
 
