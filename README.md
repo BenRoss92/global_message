@@ -15,7 +15,7 @@ Build a custom WordPress plugin called “Global Message”. It should allow the
 
 ## My Approach
 
-As I had not used the WordPress Plugin API before, I decided to start by spiking (i.e. to not test at first), using a procedural programming approach to advance quickly and keep the complexity to a minimum. My thinking was that once I had achieved the functionality of the brief, I would then be able to focus purely on testing and redesigning using object-oriented programming. Due to time constraints, with the spiking stage taking longer than expected, I decided to instead forgo using object-oriented programming and instead rewrote the procedural functions into smaller, tested units with single responsibilities.
+As I had not used the WordPress Plugin API before, I decided to start by spiking (i.e. to not test at first), using a procedural programming approach to advance quickly and keep the complexity to a minimum (please see the [spiking](https://github.com/BenRoss92/global_message/tree/spiking) GitHub branch for this early version). My thinking was that once I had achieved the functionality of the brief, I would then be able to focus purely on testing and redesigning using object-oriented programming. Due to time constraints, with the spiking stage taking longer than expected, I decided to instead forgo using object-oriented programming and instead rewrote the procedural functions into smaller, tested units with single responsibilities.
 
 ## What I would have improved with more time
 
