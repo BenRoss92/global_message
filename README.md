@@ -22,6 +22,8 @@ As I had not used the WordPress Plugin API before, I decided to start by spiking
 - Would have used object-oriented design rather than procedural programming
   - Less repetition, more readable, more extendable/reusable
   - Encapsulation - also wouldn't have any naming conflicts with built-in WordPress functions.
+  - Use dependency injection instead of hardcoded variables in functions
+  - Add getters and setters to use variables as properties, reducing repeated need for parameters in each function
 - Would have used TDD
   - I added tests after instead of before building functions
   - It became harder to split existing functions into smaller units by doing so.
@@ -31,6 +33,7 @@ As I had not used the WordPress Plugin API before, I decided to start by spiking
 - Remove hardcoded variables in `display_editor()`, `update_message()` and `add_mesage_to_content($content)` functions
   - To do this, when adding WordPress actions, could pass arguments into custom functions by using e.g. `do_action` or wrap them in separate functions.
   - Adding smaller commits to the `testing` branch as I had done in the `spiking` branch
+  - Increase the testing coverage to 100% (this was due to lack of time and the inability to use Codeception for feature testing).
 
 ## Challenges faced
 
