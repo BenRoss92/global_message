@@ -65,7 +65,7 @@ and a test database named `wordpress_test`
 
 ### Using the plugin
 
-1. Activate the 'Global Message' plugin in the WordPress admin dashboard (`http://localhost/~<YOURUSERNAME>/wordpress/wp-admin`)
+1. Activate the 'Global Message' plugin listed in the 'Plugins' menu of the WordPress admin area (`http://localhost/~<YOURUSERNAME>/wordpress/wp-admin`)
 2. `cd` into the `wordpress/wp-content/plugins/global_message` directory and run the unit tests - `$ phpunit --debug`
-3. Add a global message in the Global Message widget inside the WordPress admin dashboard and click 'Update Message'
+3. Add a global message inside the Global Message widget, located in the 'Dashboard' menu of the WordPress admin area. Then click 'Update Message'.
 4. View the global message on all pages (e.g. to view the landing page, visit `http://localhost/~<YOURUSERNAME>/wordpress/`)

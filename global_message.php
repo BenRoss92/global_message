@@ -36,7 +36,7 @@
   function update_message() {
     $unsanitized_message = $_POST['editor_text'];
     add_message_to_database('global_message', $unsanitized_message);
-    wp_safe_redirect('http://localhost/~Ben/wordpress/wp-admin/');
+    wp_safe_redirect(admin_url());
     exit;
   }
 
